@@ -1,0 +1,52 @@
+{
+  "name": "es6-module-seed",
+  "version": "1.0.0",
+  "description": "A seed project for developing ES6/ES2015 module",
+  "main": "lib/example.js",
+  "scripts": {
+    "build": "npm run build:clean && npm run build:scripts && npm run build:min",
+    "build:clean": "rimraf dist/*",
+    "build:scripts": "browserify src/example.js -s Example -t [babelify] -o dist/example.js",
+    "build:min": "uglifyjs dist/example.js --comments '/!/' -m screw_ie8=true -c screw_ie8=true,unused=false -o dist/example.min.js",
+    "test": "mocha --ui qunit --compilers js:babel-core/register",
+    "lint": "eslint src/**/*.js",
+    "prepublish": "babel src --out-dir lib --loose all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chunkai1312/es6-module-seed.git"
+  },
+  "keywords": [
+    "es6",
+    "es2015",
+    "module",
+    "seed",
+    "babel",
+    "browserify",
+    "universal"
+  ],
+  "author": "Chun-Kai Wang <chunkai1312@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chunkai1312/es6-module-seed/issues"
+  },
+  "homepage": "https://github.com/chunkai1312/es6-module-seed#readme",
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.9.1",
+    "babel-eslint": "^6.0.4",
+    "babel-plugin-transform-es2015-modules-umd": "^6.8.0",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2015-loose": "^7.0.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "chai": "^3.5.0",
+    "eslint": "^2.13.0",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": "^1.8.1",
+    "mocha": "^2.5.3",
+    "rimraf": "^2.5.2",
+    "uglify-js": "^2.6.3"
+  }
+}
