@@ -22,4 +22,4 @@ $ npm test
 
 ## License
 
-MIT © Chun-Kai Wang
+MIT © [Chun-Kai Wang](https://github.com/chunkai1312)
