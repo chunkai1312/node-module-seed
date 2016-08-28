@@ -1,6 +1,6 @@
-# es6-module-seed
+# node-module-seed
 
-> A seed project for developing ES6/ES2015 module
+> A seed project for developing Node.js module with ES6/ES2015
 
 ## Setup
 
