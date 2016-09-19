@@ -9,7 +9,7 @@
     "build:babel": "babel src -d lib",
     "build:browserify": "browserify src/index.js -s Example -t [ babelify --presets [ es2015 stage-0 ] ] -o dist/example.js",
     "build:uglify": "uglifyjs dist/example.js --comments '/!/' -m screw_ie8=true -c screw_ie8=true,unused=false -o dist/example.min.js",
-    "test": "mocha --compilers js:babel-core/register",
+    "test": "mocha",
     "lint": "eslint src test",
     "prepublish": "npm run build"
   },
