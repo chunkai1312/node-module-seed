@@ -34,7 +34,6 @@
   "homepage": "https://github.com/chunkai1312/node-module-seed#readme",
   "devDependencies": {
     "babel-cli": "^6.18.0",
-    "babel-core": "^6.21.0",
     "babel-eslint": "^7.1.1",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-polyfill": "^6.20.0",
@@ -51,5 +50,9 @@
     "mocha": "^3.2.0",
     "rimraf": "^2.5.4",
     "uglify-js": "^2.7.5"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "slack-node": "^0.1.8"
   }
 }
